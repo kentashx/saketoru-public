@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>さけとる | 利用規約・プライバシーポリシー</title>
+    <meta name="description" content="さけとるの利用規約とプライバシーポリシーを掲載する公開ページです。ラベル撮影、飲酒記録、産地マップ、AI 解析、Premium 機能に関する基本情報を確認できます。">
+    <meta property="og:site_name" content="さけとる">
+    <meta property="og:title" content="さけとる | 利用規約・プライバシーポリシー">
+    <meta property="og:description" content="さけとるの公開情報ページ。利用規約とプライバシーポリシーを確認できます。">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/icon.svg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="さけとる">
+    <meta name="twitter:description" content="利用規約とプライバシーポリシーを公開しています。">
+    <meta name="twitter:image" content="/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background: #0a0f1a;
+            --surface-1: rgba(20, 30, 46, 0.94);
+            --surface-2: rgba(26, 37, 56, 0.94);
+            --surface-3: rgba(32, 45, 66, 0.88);
+            --foreground: #f5f0e8;
+            --foreground-strong: #fdfaf5;
+            --muted: #c8bca8;
+            --muted-soft: rgba(200, 188, 168, 0.72);
+            --gold: #c9a84c;
+            --gold-bright: #f5d660;
+            --gold-soft: rgba(201, 168, 76, 0.16);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(201, 168, 76, 0.28);
+            --shadow-strong: 0 24px 72px rgba(0, 0, 0, 0.42);
+            --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.24);
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", sans-serif;
+            color: var(--foreground);
+            background:
+                radial-gradient(circle at top left, rgba(201, 168, 76, 0.14), transparent 26%),
+                radial-gradient(circle at top right, rgba(81, 113, 169, 0.18), transparent 28%),
+                linear-gradient(180deg, #0a0f1a 0%, #111a29 56%, #0d1420 100%);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(10, 15, 26, 0.78);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(18px);
+        }
+
+        .header-inner {
+            min-height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .brand-mark {
+            width: 44px;
+            height: 44px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            flex-shrink: 0;
+        }
+
+        .brand-mark img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .brand-copy strong {
+            display: block;
+            font-family: "Noto Serif JP", serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.04em;
+            color: var(--foreground-strong);
+        }
+
+        .brand-copy span {
+            display: block;
+            margin-top: 3px;
+            font-size: 0.78rem;
+            letter-spacing: 0.16em;
+            color: var(--muted-soft);
+            text-transform: uppercase;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 16px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--foreground);
+            font-weight: 700;
+            transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-1px);
+            border-color: var(--border-strong);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        main {
+            overflow: hidden;
+        }
+
+        section {
+            padding: 84px 0;
+        }
+
+        .hero {
+            padding-top: 56px;
+        }
+
+        .hero-shell {
+            display: grid;
+            grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        .hero-copy,
+        .hero-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 30px;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01)),
+                var(--surface-1);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .hero-copy {
+            padding: 42px;
+        }
+
+        .hero-copy::before,
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 12% 12%, rgba(245, 214, 96, 0.14), transparent 22%),
+                radial-gradient(circle at 88% 18%, rgba(92, 129, 188, 0.16), transparent 24%);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid rgba(201, 168, 76, 0.22);
+            background: rgba(201, 168, 76, 0.08);
+            color: var(--gold-bright);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: "Noto Serif JP", serif;
+            color: var(--foreground-strong);
+            line-height: 1.25;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4.1rem);
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            max-width: 640px;
+            color: var(--muted);
+            line-height: 2;
+            font-size: 1rem;
+        }
+
+        .hero-points {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 26px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--foreground);
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .hero-card {
+            padding: 28px;
+            display: grid;
+            align-items: center;
+        }
+
+        .glass {
+            position: relative;
+            z-index: 1;
+            border-radius: 24px;
+            padding: 26px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02)),
+                rgba(12, 18, 31, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .card-kicker {
+            color: var(--gold-bright);
+            font-size: 0.82rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.55rem;
+            margin-bottom: 14px;
+        }
+
+        .card-text {
+            color: var(--muted);
+            line-height: 1.95;
+            margin-bottom: 18px;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .stat {
+            padding: 14px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .stat strong {
+            display: block;
+            font-family: "Noto Serif JP", serif;
+            color: var(--gold-bright);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .stat span {
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        .section-head {
+            max-width: 760px;
+            margin-bottom: 26px;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            margin-bottom: 12px;
+        }
+
+        .section-head p {
+            color: var(--muted);
+            line-height: 1.95;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .feature-card,
+        .link-card {
+            padding: 24px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+                var(--surface-2);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .feature-card h3,
+        .link-card h3 {
+            font-size: 1.18rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card p,
+        .link-card p {
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+        .feature-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-weight: 900;
+            color: var(--background);
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+            box-shadow: 0 12px 28px rgba(201, 168, 76, 0.28);
+        }
+
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .link-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .link-card::after {
+            content: "→";
+            position: absolute;
+            right: 24px;
+            top: 22px;
+            font-size: 1.3rem;
+            color: var(--gold-bright);
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--border-strong);
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 18px 20px;
+            border-radius: 22px;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            background: rgba(201, 168, 76, 0.08);
+            color: var(--muted);
+            line-height: 1.9;
+        }
+
+        footer {
+            padding: 0 0 34px;
+        }
+
+        .footer-shell {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+            color: var(--muted-soft);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-bright);
+        }
+
+        @media (max-width: 920px) {
+            .hero-shell,
+            .cards,
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 720px) {
+            section {
+                padding: 68px 0;
+            }
+
+            .hero-copy,
+            .hero-card {
+                padding: 22px;
+            }
+
+            .header-inner {
+                padding: 12px 0;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .header-nav {
+                width: 100%;
+                justify-content: flex-start;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark"><img src="icon.svg" alt="さけとる アイコン"></span>
+                <span class="brand-copy">
+                    <strong>さけとる</strong>
+                    <span>Public Info</span>
+                </span>
+            </a>
+            <nav class="header-nav">
+                <a class="nav-link" href="terms_of_service.html">利用規約</a>
+                <a class="nav-link" href="privacy_policy.html">プライバシーポリシー</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-shell">
+                <div class="hero-copy">
+                    <div class="eyebrow">Sake Log App</div>
+                    <h1>さけとるの公開情報ページ</h1>
+                    <p class="lead">
+                        さけとるは、ラベル撮影から飲酒記録、味の傾向整理、産地マップの確認までをひとつにつなぐ
+                        プライベート酒ログアプリです。このページでは、利用規約とプライバシーポリシーを公開しています。
+                    </p>
+                    <div class="hero-points">
+                        <span class="pill">ラベル撮影と記録</span>
+                        <span class="pill">AI 解析補助</span>
+                        <span class="pill">産地マップ</span>
+                        <span class="pill">Premium 機能</span>
+                    </div>
+                </div>
+
+                <div class="hero-card">
+                    <div class="glass">
+                        <div class="card-kicker">What This Covers</div>
+                        <h2 class="card-title">公開している情報</h2>
+                        <p class="card-text">
+                            利用条件、取得する情報、カメラ・写真・位置情報の扱い、
+                            AI 解析やクラウド保存に関する基本方針を確認できます。
+                        </p>
+                        <div class="stat-grid">
+                            <div class="stat">
+                                <strong>利用規約</strong>
+                                <span>利用条件、禁止事項、Premium、有償機能、免責など</span>
+                            </div>
+                            <div class="stat">
+                                <strong>プライバシー</strong>
+                                <span>取得情報、利用目的、外部サービス、安全管理など</span>
+                            </div>
+                            <div class="stat">
+                                <strong>対象機能</strong>
+                                <span>飲酒ログ、写真記録、産地表示、AI 補助機能</span>
+                            </div>
+                            <div class="stat">
+                                <strong>更新日</strong>
+                                <span>2026年4月17日版を公開しています</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <h2>さけとるで扱う主な内容</h2>
+                    <p>
+                        公開文面は、現在のアプリ仕様と公開サイトの役割に合わせて整理しています。
+                        実際のアプリ提供機能や外部サービス構成が変わった場合は、内容もあわせて更新します。
+                    </p>
+                </div>
+                <div class="cards">
+                    <article class="feature-card">
+                        <div class="feature-number">1</div>
+                        <h3>写真から酒ログを作成</h3>
+                        <p>ラベル撮影または写真ライブラリから選んだ画像をもとに、お酒の記録を補助します。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-number">2</div>
+                        <h3>記録と好みの整理</h3>
+                        <p>銘柄名、評価、感想、味の傾向、飲酒場所などを自分用のログとして保存できます。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-number">3</div>
+                        <h3>産地マップと Premium</h3>
+                        <p>産地の可視化、AI による解析補助、レコメンド、Premium 機能などを提供する場合があります。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-head">
+                    <h2>公開ドキュメント</h2>
+                    <p>App Store 審査、ユーザー向け案内、外部公開用の参照先として利用できるページです。</p>
+                </div>
+                <div class="link-grid">
+                    <a class="link-card" href="terms_of_service.html">
+                        <h3>利用規約</h3>
+                        <p>
+                            本サービスの利用条件、禁止事項、有料機能、ユーザーコンテンツ、免責、準拠法などをまとめています。
+                        </p>
+                    </a>
+                    <a class="link-card" href="privacy_policy.html">
+                        <h3>プライバシーポリシー</h3>
+                        <p>
+                            取得する情報、利用目的、カメラ・写真・位置情報の取り扱い、外部サービス、安全管理方針をまとめています。
+                        </p>
+                    </a>
+                </div>
+                <div class="notice">
+                    本サービスは酒類の記録を目的とした個人向けサービスです。未成年者による飲酒を推奨するものではなく、
+                    実際の飲酒や購入にあたっては、各自の責任で法令・体調・周囲の安全に十分配慮してください。
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-shell">
+            <div>© 2026 さけとる / kentashx</div>
+            <div class="footer-links">
+                <a href="terms_of_service.html">利用規約</a>
+                <a href="privacy_policy.html">プライバシーポリシー</a>
+                <a href="https://github.com/kentashx/saketoru-public/issues">お問い合わせ</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

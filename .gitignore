@@ -1,0 +1,5 @@
+.DS_Store
+.history/*
+.lhignore
+.lh/*
+features_ignore/*
