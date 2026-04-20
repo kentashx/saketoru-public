@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>さけとる | 利用規約・プライバシーポリシー</title>
-    <meta name="description" content="さけとるの利用規約とプライバシーポリシーを掲載する公開ページです。ラベル撮影、飲酒記録、産地マップ、AI 解析、Premium 機能に関する基本情報を確認できます。">
+    <title>さけとる | お酒の記録・スキャン・好み分析アプリ</title>
+    <meta name="description" content="さけとるは、お酒ラベルのAIスキャンから記録、コレクション管理、産地マップ、好み分析までをつなぐ酒ログアプリです。主要機能と公開ドキュメントを確認できます。">
     <meta property="og:site_name" content="さけとる">
-    <meta property="og:title" content="さけとる | 利用規約・プライバシーポリシー">
-    <meta property="og:description" content="さけとるの公開情報ページ。利用規約とプライバシーポリシーを確認できます。">
+    <meta property="og:title" content="さけとる | お酒の記録・スキャン・好み分析アプリ">
+    <meta property="og:description" content="コレクション管理、気になる保存、AIスキャン、産地マップ、プロフィール分析、Premium機能までをまとめて確認できます。">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/icon.svg">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="さけとる">
-    <meta name="twitter:description" content="利用規約とプライバシーポリシーを公開しています。">
+    <meta name="twitter:description" content="お酒の記録・スキャン・好み分析ができるアプリ。">
     <meta name="twitter:image" content="/icon.svg">
     <link rel="icon" type="image/svg+xml" href="icon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -171,7 +171,12 @@
         }
 
         .hero-copy,
-        .hero-card {
+        .hero-card,
+        .feature-card,
+        .link-card,
+        .summary-panel,
+        .timeline-item,
+        .cta-panel {
             position: relative;
             overflow: hidden;
             border-radius: 30px;
@@ -182,12 +187,16 @@
             box-shadow: var(--shadow-strong);
         }
 
-        .hero-copy {
+        .hero-copy,
+        .hero-card {
             padding: 42px;
         }
 
         .hero-copy::before,
-        .hero-card::before {
+        .hero-card::before,
+        .feature-card::before,
+        .summary-panel::before,
+        .cta-panel::before {
             content: "";
             position: absolute;
             inset: 0;
@@ -232,14 +241,19 @@
             font-size: 1rem;
         }
 
-        .hero-points {
+        .hero-points,
+        .tag-list {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
+        }
+
+        .hero-points {
             margin-top: 26px;
         }
 
-        .pill {
+        .pill,
+        .tag {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -253,7 +267,6 @@
         }
 
         .hero-card {
-            padding: 28px;
             display: grid;
             align-items: center;
         }
@@ -283,26 +296,35 @@
             margin-bottom: 14px;
         }
 
-        .card-text {
+        .card-text,
+        .section-head p,
+        .feature-card p,
+        .link-card p,
+        .summary-panel p,
+        .timeline-item p,
+        .cta-panel p,
+        .notice {
             color: var(--muted);
-            line-height: 1.95;
-            margin-bottom: 18px;
+            line-height: 1.9;
         }
 
-        .stat-grid {
+        .stat-grid,
+        .summary-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
         }
 
-        .stat {
+        .stat,
+        .summary-chip {
             padding: 14px;
             border-radius: 18px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             background: rgba(255, 255, 255, 0.04);
         }
 
-        .stat strong {
+        .stat strong,
+        .summary-chip strong {
             display: block;
             font-family: "Noto Serif JP", serif;
             color: var(--gold-bright);
@@ -310,14 +332,15 @@
             margin-bottom: 6px;
         }
 
-        .stat span {
+        .stat span,
+        .summary-chip span {
             color: var(--muted);
             font-size: 0.9rem;
             line-height: 1.65;
         }
 
         .section-head {
-            max-width: 760px;
+            max-width: 780px;
             margin-bottom: 26px;
         }
 
@@ -326,38 +349,37 @@
             margin-bottom: 12px;
         }
 
-        .section-head p {
-            color: var(--muted);
-            line-height: 1.95;
-        }
-
-        .cards {
+        .cards,
+        .summary-layout,
+        .link-grid {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
         }
 
+        .cards {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .summary-layout {
+            grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+            align-items: start;
+        }
+
         .feature-card,
-        .link-card {
+        .link-card,
+        .summary-panel,
+        .timeline-item,
+        .cta-panel {
             padding: 24px;
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            background:
-                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
-                var(--surface-2);
-            box-shadow: var(--shadow-soft);
         }
 
         .feature-card h3,
-        .link-card h3 {
+        .link-card h3,
+        .summary-panel h3,
+        .timeline-item h3,
+        .cta-panel h3 {
             font-size: 1.18rem;
             margin-bottom: 12px;
-        }
-
-        .feature-card p,
-        .link-card p {
-            color: var(--muted);
-            line-height: 1.9;
         }
 
         .feature-number {
@@ -374,16 +396,80 @@
             box-shadow: 0 12px 28px rgba(201, 168, 76, 0.28);
         }
 
-        .link-grid {
+        .feature-list,
+        .timeline-list {
+            list-style: none;
             display: grid;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .feature-list li,
+        .timeline-item strong {
+            color: var(--foreground);
+        }
+
+        .feature-list li {
+            padding-left: 18px;
+            position: relative;
+            line-height: 1.8;
+            color: var(--muted);
+        }
+
+        .feature-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+        }
+
+        .summary-panel {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+                var(--surface-2);
+        }
+
+        .summary-grid {
+            margin-top: 18px;
+        }
+
+        .timeline-list {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
+        }
+
+        .timeline-item {
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+                var(--surface-3);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .timeline-label {
+            display: inline-flex;
+            margin-bottom: 14px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(201, 168, 76, 0.12);
+            color: var(--gold-bright);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .link-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
         .link-card {
-            position: relative;
-            overflow: hidden;
             transition: transform 0.2s ease, border-color 0.2s ease;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
+                var(--surface-2);
+            box-shadow: var(--shadow-soft);
         }
 
         .link-card::after {
@@ -400,14 +486,20 @@
             border-color: var(--border-strong);
         }
 
+        .cta-panel {
+            display: grid;
+            gap: 18px;
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+                var(--surface-2);
+        }
+
         .notice {
             margin-top: 22px;
             padding: 18px 20px;
             border-radius: 22px;
             border: 1px solid rgba(201, 168, 76, 0.2);
             background: rgba(201, 168, 76, 0.08);
-            color: var(--muted);
-            line-height: 1.9;
         }
 
         footer {
@@ -437,7 +529,9 @@
 
         @media (max-width: 920px) {
             .hero-shell,
+            .summary-layout,
             .cards,
+            .timeline-list,
             .link-grid {
                 grid-template-columns: 1fr;
             }
@@ -464,7 +558,8 @@
                 justify-content: flex-start;
             }
 
-            .stat-grid {
+            .stat-grid,
+            .summary-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -477,10 +572,11 @@
                 <span class="brand-mark"><img src="icon.svg" alt="さけとる アイコン"></span>
                 <span class="brand-copy">
                     <strong>さけとる</strong>
-                    <span>Public Info</span>
+                    <span>Sake Log App</span>
                 </span>
             </a>
             <nav class="header-nav">
+                <a class="nav-link" href="#features">機能一覧</a>
                 <a class="nav-link" href="terms_of_service.html">利用規約</a>
                 <a class="nav-link" href="privacy_policy.html">プライバシーポリシー</a>
             </nav>
@@ -491,44 +587,46 @@
         <section class="hero">
             <div class="container hero-shell">
                 <div class="hero-copy">
-                    <div class="eyebrow">Sake Log App</div>
-                    <h1>さけとるの公開情報ページ</h1>
+                    <div class="eyebrow">AI Sake Logging</div>
+                    <h1>ラベルを撮るだけで、<br>お酒の記録が深く残る。</h1>
                     <p class="lead">
-                        さけとるは、ラベル撮影から飲酒記録、味の傾向整理、産地マップの確認までをひとつにつなぐ
-                        プライベート酒ログアプリです。このページでは、利用規約とプライバシーポリシーを公開しています。
+                        さけとるは、スキャンしたお酒をコレクションとして整理し、
+                        飲んだ回数、評価、味の傾向、産地の広がりまでひとつにまとめる酒ログアプリです。
+                        気になる候補の保存から、詳細な履歴管理、マップ表示、好み分析まで対応します。
                     </p>
                     <div class="hero-points">
-                        <span class="pill">ラベル撮影と記録</span>
-                        <span class="pill">AI 解析補助</span>
+                        <span class="pill">AIラベル解析</span>
+                        <span class="pill">コレクション管理</span>
                         <span class="pill">産地マップ</span>
-                        <span class="pill">Premium 機能</span>
+                        <span class="pill">好み分析</span>
+                        <span class="pill">Premium対応</span>
                     </div>
                 </div>
 
                 <div class="hero-card">
                     <div class="glass">
-                        <div class="card-kicker">What This Covers</div>
-                        <h2 class="card-title">公開している情報</h2>
+                        <div class="card-kicker">Core Flow</div>
+                        <h2 class="card-title">撮る・残す・見返す</h2>
                         <p class="card-text">
-                            利用条件、取得する情報、カメラ・写真・位置情報の扱い、
-                            AI 解析やクラウド保存に関する基本方針を確認できます。
+                            カメラ撮影、フォトライブラリ、手入力の3経路から記録を始められます。
+                            単一本にも複数本にも対応し、評価や場所、飲み方、メモを積み上げながら自分の好みを育てていく設計です。
                         </p>
                         <div class="stat-grid">
                             <div class="stat">
-                                <strong>利用規約</strong>
-                                <span>利用条件、禁止事項、Premium、有償機能、免責など</span>
+                                <strong>記録管理</strong>
+                                <span>本数、平均評価、国数、都道府県数を横断表示</span>
                             </div>
                             <div class="stat">
-                                <strong>プライバシー</strong>
-                                <span>取得情報、利用目的、外部サービス、安全管理など</span>
+                                <strong>検索と絞り込み</strong>
+                                <span>銘柄名、蔵元、産地、カテゴリで素早く探索</span>
                             </div>
                             <div class="stat">
-                                <strong>対象機能</strong>
-                                <span>飲酒ログ、写真記録、産地表示、AI 補助機能</span>
+                                <strong>詳細記録</strong>
+                                <span>価格、度数、容量、シーン、履歴、テイスティングノート</span>
                             </div>
                             <div class="stat">
-                                <strong>更新日</strong>
-                                <span>2026年4月17日版を公開しています</span>
+                                <strong>無料 / Premium</strong>
+                                <span>無料枠、広告追加枠、無制限スキャン、広告非表示制御</span>
                             </div>
                         </div>
                     </div>
@@ -536,54 +634,183 @@
             </div>
         </section>
 
-        <section>
+        <section id="features">
             <div class="container">
                 <div class="section-head">
-                    <h2>さけとるで扱う主な内容</h2>
+                    <h2>主要機能</h2>
                     <p>
-                        公開文面は、現在のアプリ仕様と公開サイトの役割に合わせて整理しています。
-                        実際のアプリ提供機能や外部サービス構成が変わった場合は、内容もあわせて更新します。
+                        アプリ内の中核機能を、実際の利用フローに沿って整理しています。
+                        記録前の候補管理から、スキャン、詳細閲覧、分析、課金導線までを一続きで扱います。
                     </p>
                 </div>
                 <div class="cards">
                     <article class="feature-card">
                         <div class="feature-number">1</div>
-                        <h3>写真から酒ログを作成</h3>
-                        <p>ラベル撮影または写真ライブラリから選んだ画像をもとに、お酒の記録を補助します。</p>
+                        <h3>コレクション</h3>
+                        <p>記録したお酒を一覧化し、検索・絞り込み・並び替え・表示切替で見返せます。</p>
+                        <ul class="feature-list">
+                            <li>記録本数、平均評価、記録国数をヘッダー統計で表示</li>
+                            <li>銘柄名、蔵元、産地でテキスト検索</li>
+                            <li>日本酒、焼酎、ビール、ワイン、ウイスキー、ジン、チューハイなどでカテゴリ絞り込み</li>
+                            <li>新着順、評価順、回数順、名前順、価格順で並び替え</li>
+                            <li>2列 / 3列 / リスト表示、一括登録データ除外、無料プラン時の広告表示</li>
+                        </ul>
                     </article>
                     <article class="feature-card">
                         <div class="feature-number">2</div>
-                        <h3>記録と好みの整理</h3>
-                        <p>銘柄名、評価、感想、味の傾向、飲酒場所などを自分用のログとして保存できます。</p>
+                        <h3>気になる</h3>
+                        <p>まだ飲んでいない候補をストックし、あとから飲酒記録へ変換できます。</p>
+                        <ul class="feature-list">
+                            <li>スキャン結果から「気になる」へ保存</li>
+                            <li>銘柄名、カテゴリ、メモで検索</li>
+                            <li>詳細を読み取り専用で閲覧可能</li>
+                            <li>評価とメモを付けてコレクションへ移動</li>
+                            <li>飲む前の候補管理用ストックとして利用可能</li>
+                        </ul>
                     </article>
                     <article class="feature-card">
                         <div class="feature-number">3</div>
-                        <h3>産地マップと Premium</h3>
-                        <p>産地の可視化、AI による解析補助、レコメンド、Premium 機能などを提供する場合があります。</p>
+                        <h3>スキャン</h3>
+                        <p>このアプリの中心機能。1本ずつでも、まとめてでも記録を開始できます。</p>
+                        <ul class="feature-list">
+                            <li>カメラ撮影、フォトライブラリ、手入力に対応</li>
+                            <li>複数本の一括検出、一括登録、不要候補のパス</li>
+                            <li>AIが銘柄、英名、カテゴリ、蔵元、価格帯、度数、容量、味わい、産地、豆知識、ペアリング候補まで解析</li>
+                            <li>進捗表示でフェーズ文言、ヒント、トリビアを案内</li>
+                            <li>各ボトルごとの補正編集、評価、メモ、飲み方、場所、シチュエーション入力</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-number">4</div>
+                        <h3>スキャン回数制御</h3>
+                        <p>無料利用とPremium利用で体験を切り替えられる設計です。</p>
+                        <ul class="feature-list">
+                            <li>無料で1日1回スキャン可能</li>
+                            <li>動画広告1視聴ごとに1枠追加、1日最大3枠</li>
+                            <li>Premiumならスキャン無制限</li>
+                            <li>無料枠が尽きると課金または広告視聴の導線を表示</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-number">5</div>
+                        <h3>詳細画面</h3>
+                        <p>1本ごとの記録を深く見返し、履歴や評価を積み増せます。</p>
+                        <ul class="feature-list">
+                            <li>画像、カテゴリ、銘柄名、英名、蔵元、産地、シーン、容量、価格、度数を表示</li>
+                            <li>大きな評価表示、合計回数、最終飲酒日、イベント一覧を確認</li>
+                            <li>今日飲んだ追加、回数だけ追加、履歴ごとの飲み方保存</li>
+                            <li>メモ、評価、テイスティングノート、フードペアリング、豆知識を編集・表示</li>
+                            <li>飲んだ場所からGoogle Mapsを開く導線、記録削除にも対応</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-number">6</div>
+                        <h3>マップとプロフィール</h3>
+                        <p>どこ産をどれだけ飲んだかと、自分の傾向を可視化します。</p>
+                        <ul class="feature-list">
+                            <li>日本 / 世界の2スコープ切替、都道府県別 / 国別の塗り分け地図</li>
+                            <li>地方ブロック、世界地域ブロックごとの制覇状況とサマリー</li>
+                            <li>表示名、ひとこと、会員ステータス、集計表示をプロフィールに集約</li>
+                            <li>好き・苦手に出やすい味の分析、吟くんコメント、詳細分析画面</li>
+                            <li>通知設定、Premium導線、App Store共有に対応</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
 
         <section>
+            <div class="container summary-layout">
+                <div>
+                    <div class="section-head">
+                        <h2>記録体験の流れ</h2>
+                        <p>
+                            単なる一覧アプリではなく、候補保存からスキャン、追記、分析までがつながっています。
+                            実装上も、複数本スキャンや履歴追加、分析根拠ログ抽出まで視野に入れた構造です。
+                        </p>
+                    </div>
+                    <div class="timeline-list">
+                        <article class="timeline-item">
+                            <span class="timeline-label">Step 01</span>
+                            <h3>候補を見つける</h3>
+                            <p>スキャン結果から気になるへ退避し、あとで飲んだ記録へ変換できます。</p>
+                        </article>
+                        <article class="timeline-item">
+                            <span class="timeline-label">Step 02</span>
+                            <h3>AIで下書きを作る</h3>
+                            <p>ラベル解析で銘柄やカテゴリ、産地、度数、容量、味わい候補を自動入力します。</p>
+                        </article>
+                        <article class="timeline-item">
+                            <span class="timeline-label">Step 03</span>
+                            <h3>自分の情報を重ねる</h3>
+                            <p>星評価、メモ、飲み方、場所、シチュエーションを足して記録を完成させます。</p>
+                        </article>
+                        <article class="timeline-item">
+                            <span class="timeline-label">Step 04</span>
+                            <h3>地図と分析で見返す</h3>
+                            <p>産地分布や味覚5軸の傾向を見ながら、次に飲みたい一本へつなげます。</p>
+                        </article>
+                    </div>
+                </div>
+
+                <aside class="summary-panel">
+                    <h3>実装されている周辺機能</h3>
+                    <p>
+                        コア画面に加えて、通知、購入状態同期、分析ロジック、準備中機能の下地も含まれています。
+                    </p>
+                    <div class="summary-grid">
+                        <div class="summary-chip">
+                            <strong>好み分析</strong>
+                            <span>星評価つき記録を使い、甘み・酸味・苦み・濃醇・旨みの5軸で傾向を算出</span>
+                        </div>
+                        <div class="summary-chip">
+                            <strong>信頼度計算</strong>
+                            <span>記録数、カテゴリ分散、低評価サンプルの有無などを加味</span>
+                        </div>
+                        <div class="summary-chip">
+                            <strong>通知</strong>
+                            <span>端末登録、許諾取得、21時リマインド想定の daily_log_reminder 導線</span>
+                        </div>
+                        <div class="summary-chip">
+                            <strong>Premium</strong>
+                            <span>RevenueCatペイウォール、購入同期、復元購入、広告非表示方向の制御</span>
+                        </div>
+                    </div>
+                    <div class="tag-list" style="margin-top: 18px;">
+                        <span class="tag">ウェルカムバナー</span>
+                        <span class="tag">Google Maps導線</span>
+                        <span class="tag">App Store共有</span>
+                        <span class="tag">匿名セッション前提</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section>
             <div class="container">
                 <div class="section-head">
-                    <h2>公開ドキュメント</h2>
-                    <p>App Store 審査、ユーザー向け案内、外部公開用の参照先として利用できるページです。</p>
+                    <h2>公開ドキュメントと補足</h2>
+                    <p>
+                        サービス紹介に加えて、外部公開用の規約ページとプライバシーポリシーを参照できます。
+                        現時点でコード上に存在しつつUI導線が弱い機能も補足しています。
+                    </p>
                 </div>
                 <div class="link-grid">
                     <a class="link-card" href="terms_of_service.html">
                         <h3>利用規約</h3>
-                        <p>
-                            本サービスの利用条件、禁止事項、有料機能、ユーザーコンテンツ、免責、準拠法などをまとめています。
-                        </p>
+                        <p>利用条件、禁止事項、有料機能、ユーザーコンテンツ、免責、準拠法などをまとめています。</p>
                     </a>
                     <a class="link-card" href="privacy_policy.html">
                         <h3>プライバシーポリシー</h3>
-                        <p>
-                            取得する情報、利用目的、カメラ・写真・位置情報の取り扱い、外部サービス、安全管理方針をまとめています。
-                        </p>
+                        <p>取得情報、利用目的、カメラ・写真・位置情報の取り扱い、外部サービス、安全管理方針をまとめています。</p>
                     </a>
+                </div>
+                <div class="cta-panel" style="margin-top: 18px;">
+                    <h3>準備中・導線弱めの項目</h3>
+                    <p>
+                        データ管理とヘルプは準備中です。ログアウトUIは未提供で、現状は匿名セッション前提です。
+                        また、AIおすすめ取得用の `recommend-bottle` はリポジトリ層にありますが、現行UIから直接使う画面は見当たりません。
+                    </p>
                 </div>
                 <div class="notice">
                     本サービスは酒類の記録を目的とした個人向けサービスです。未成年者による飲酒を推奨するものではなく、
